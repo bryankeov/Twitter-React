@@ -1,5 +1,5 @@
-import './App.css';
-import Sidebar from "./components/Sidebar"
+import "./App.css";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
@@ -7,6 +7,6 @@ function App() {
       <Sidebar/>
     </div>
   );
-}
+};
 
 export default App;
