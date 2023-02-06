@@ -14,41 +14,17 @@ import MoreIcon from "@mui/icons-material/More";
 function Sidebar() {
   return (
     <div className="sidebar">
-      <TwitterIcon/>
-      <SidebarOptions
-        Icon={HomeIcon}
-        text="Home"
-      />
-      <SidebarOptions
-        Icon={ExploreIcon}
-        text="Explore"
-      />
-      <SidebarOptions
-        Icon={NotificationIcon}
-        text="Notifications"
-      />
-      <SidebarOptions
-        Icon={MessageIcon}
-        text="Messages"
-      />
-      <SidebarOptions
-        Icon={BookmarkIcon}
-        text="Bookmarks"
-      />
-      <SidebarOptions
-        Icon={ListIcon}
-        text="Lists"
-      />
-      <SidebarOptions
-        Icon={ProfileIcon}
-        text="Profile"
-      />
-      <SidebarOptions
-        Icon={MoreIcon}
-        text="More"
-      />
+      <TwitterIcon />
+      <SidebarOptions Icon={HomeIcon} text="Home" />
+      <SidebarOptions Icon={ExploreIcon} text="Explore" />
+      <SidebarOptions Icon={NotificationIcon} text="Notifications" />
+      <SidebarOptions Icon={MessageIcon} text="Messages" />
+      <SidebarOptions Icon={BookmarkIcon} text="Bookmarks" />
+      <SidebarOptions Icon={ListIcon} text="Lists" />
+      <SidebarOptions Icon={ProfileIcon} text="Profile" />
+      <SidebarOptions Icon={MoreIcon} text="More" />
     </div>
-  )
-};
+  );
+}
 
 export default Sidebar;
