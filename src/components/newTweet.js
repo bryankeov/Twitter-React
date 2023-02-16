@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import db from "../firebase";
 
-function Trending() {
+function newTweet() {
   const [message, setMessage] = useState("");
   const [image, setImage] = useState("");
 
@@ -9,10 +9,10 @@ function Trending() {
     e.preventDefault();
 
     db.collection("posts").add({
-      username: "",
-      displayName: "",
+      username: "bk",
+      displayName: "Bryan",
       text: message,
-      image,
+      image: image,
     });
     setMessage("");
     setImage("");
@@ -26,15 +26,18 @@ function Trending() {
           onChange={(e) => setMessage(e.target.value)}
           placeholder="What's happening?"
         />
-
         <input
           type="text"
           value={image}
           onChange={(e) => setImage(e.target.value)}
+          placeholder="Enter an image URL"
           className="imageInput"
         />
+        <button type="submit" onChange={submitTweet} className="submitButton">
+          Tweet
+        </button>
       </form>
     </div>
   );
 }
-export default Trending;
+export default newTweet;
