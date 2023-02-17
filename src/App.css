@@ -1,3 +1,8 @@
 .App {
+  display: flex;
   text-align: center;
+}
+
+body {
+  background-color: #50b7f5;
 }
