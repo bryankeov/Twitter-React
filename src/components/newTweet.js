@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import db from "../firebase";
 
-function NewTweet() {
+export default function NewTweet() {
   const [message, setMessage] = useState("");
   const [image, setImage] = useState("");
 
@@ -40,4 +40,3 @@ function NewTweet() {
     </div>
   );
 }
-export default NewTweet;

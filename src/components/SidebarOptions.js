@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-function SidebarOptions(props) {
+export default function SidebarOptions(props) {
   return (
     <div className="sidebarOptions">
       <props.icon />
@@ -9,5 +9,3 @@ function SidebarOptions(props) {
     </div>
   );
 }
-
-export default SidebarOptions;

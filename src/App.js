@@ -3,7 +3,7 @@ import "./App.css";
 import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Sidebar />
@@ -11,5 +11,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

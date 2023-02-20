@@ -11,7 +11,7 @@ import ListIcon from "@mui/icons-material/List";
 import ProfileIcon from "@mui/icons-material/Person2";
 import MoreIcon from "@mui/icons-material/More";
 
-function Sidebar() {
+export default function Sidebar() {
   return (
     <div className="sidebar">
       <TwitterIcon className="twitter-icon" />
@@ -26,5 +26,3 @@ function Sidebar() {
     </div>
   );
 }
-
-export default Sidebar;

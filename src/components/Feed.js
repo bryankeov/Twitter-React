@@ -3,22 +3,27 @@ import NewTweet from "./NewTweet";
 import Posts from "./Posts";
 import "./Feed.css";
 import db from "../firebase";
-import { onSnapshot, collection } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 
-function Feed() {
+export default function Feed() {
   const [posts, setPosts] = useState([]);
-
   useEffect(() => {
-    db.collection("posts").onSnapshot((snap) => {
-      setPosts(snap.docs.map((doc) => doc.data()));
-    });
+    const q = query(collection(db, "posts"));
+    const querySnapshot = getDocs(q);
+    setPosts(querySnapshot.docs.map((doc) => doc.data()));
   }, []);
   return (
     <div className="feed-container">
       <NewTweet />
-      <Posts />
+      {posts.map((post, index) => (
+        <Posts
+          key={index}
+          displayName={posts.displayName}
+          username={posts.username}
+          text={posts.text}
+          image={posts.image}
+        />
+      ))}
     </div>
   );
 }
-
-export default Feed;
