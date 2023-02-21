@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import db from "../firebase";
+import { doc, setDoc } from "firebase/firestore";
 
 export default function NewTweet() {
   const [message, setMessage] = useState("");
@@ -8,12 +9,19 @@ export default function NewTweet() {
   const submitTweet = (e) => {
     e.preventDefault();
 
-    db.collection("posts").add({
+    setDoc(doc(db, "posts"), {
       username: "bk",
       displayName: "Bryan",
       text: message,
       image: image,
     });
+
+    // db.collection("posts").add({
+    //   username: "bk",
+    //   displayName: "Bryan",
+    //   text: message,
+    //   image: image,
+    // });
     setMessage("");
     setImage("");
   };
