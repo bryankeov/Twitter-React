@@ -6,7 +6,7 @@ export default function Widgets() {
   return (
     <div className="widgets-container">
       <h3>What is Happening?</h3>
-      <TwitterTweetEmbed tweetId={"1235"} />
+      <TwitterTweetEmbed tweetId={"12351"} />
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName="bk"

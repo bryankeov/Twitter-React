@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBAYb7nJL7BhTaKLvkRJplYjg4QKFm0NqQ",
@@ -14,11 +14,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-async function getPosts(db) {
-  const postsCol = collection(db, "posts");
-  const postsSnapshot = await getDocs(postsCol);
-  const postsList = postsSnapshot.docs.map((doc) => doc.data());
-  return postsList;
-}
+// async function getPosts(db) {
+//   const postsCol = collection(db, "posts");
+//   const postsSnapshot = await getDocs(postsCol);
+//   const postsList = postsSnapshot.docs.map((doc) => doc.data());
+//   return postsList;
+// }
 
 export default db;

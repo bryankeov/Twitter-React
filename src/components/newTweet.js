@@ -1,30 +1,32 @@
 import React, { useState } from "react";
+import P from 'prop-types';
 import db from "../firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 
-export default function NewTweet() {
+export default function NewTweet({ onNewTweet }) {
   const [message, setMessage] = useState("");
   const [image, setImage] = useState("");
 
-  const submitTweet = (e) => {
+  const submitTweet = async (e) => {
     e.preventDefault();
 
-    setDoc(doc(db, "posts"), {
+    const payload =   {
       username: "bk",
       displayName: "Bryan",
       text: message,
       image: image,
-    });
+    }
 
-    // db.collection("posts").add({
-    //   username: "bk",
-    //   displayName: "Bryan",
-    //   text: message,
-    //   image: image,
-    // });
+    const docRef = await addDoc(collection(db, "posts"), payload);
+
     setMessage("");
     setImage("");
+    onNewTweet({
+      ...payload,
+      id: docRef.id,
+    });
   };
+
   return (
     <div className="tweet-container">
       <form>
@@ -41,10 +43,14 @@ export default function NewTweet() {
           placeholder="Enter an image URL"
           className="imageInput"
         />
-        <button type="submit" onChange={submitTweet} className="submitButton">
+        <button type="submit" onClick={submitTweet} className="submitButton">
           Tweet
         </button>
       </form>
     </div>
   );
+}
+
+NewTweet.propTypes = {
+  onNewTweet: P.func,
 }
