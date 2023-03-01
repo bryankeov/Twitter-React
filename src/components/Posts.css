@@ -1,0 +1,13 @@
+.posts {
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+.posts-header {
+  display: flex;
+  justify-content: center;
+  font-size: 15;
+  font-weight: 700;
+}
