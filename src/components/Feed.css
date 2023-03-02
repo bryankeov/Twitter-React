@@ -1,10 +1,10 @@
 .feed-container {
   flex: 2;
-  border-bottom: 1px solid lightgray;
+  height: 100%;
 }
 
 .home-title {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #E8F5FD;
   text-align: start;
   padding: 10px;
   margin: 0;
@@ -18,19 +18,25 @@ form {
 .newTweet-input {
   height: 40px;
   margin: 10px;
-  background-color: #c0deed;
+  background-color:  #E8F5FD;
   border-radius: 25px;
   border: none;
+  min-width: 400px;
 }
 
 .submitButton {
   border-radius: 25px;
   background-color: #1DA1F2;
   border: none;
+  color: white;
+  font-weight: 900;
+  height: 40px;
+  width: 100px;
+  margin: 10px;
 }
 
 .tweet-container {
-  border-bottom: 5px solid lightgray;
+  border-bottom: 5px solid #E8F5FD;
 }
 
 .avatar {
@@ -40,16 +46,23 @@ form {
   margin: 10px;
 }
 
-.post {
+.post-container {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   background-color: white;
-  border-bottom: 1px solid lightgrey;
-  min-height: 100px;
+  border-bottom: 1px solid #E8F5FD;
   padding: 10px;
 }
 
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
 .post-header, .post-body {
+  display: flex;
+  gap: 10px;
   padding: 10px;
 }
 
@@ -57,6 +70,7 @@ form {
   height: 70px;
   width: 70px;
   border-radius: 50%;
+  margin: 10px;
 }
 
 .post-displayName {

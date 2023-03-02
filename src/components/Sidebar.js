@@ -2,14 +2,14 @@ import React from "react";
 import "./Sidebar.css";
 import SidebarOptions from "./SidebarOptions";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import HomeIcon from "@mui/icons-material/Home";
+import HomeIcon from "@mui/icons-material/HomeOutlined";
 import ExploreIcon from "@mui/icons-material/Tag";
-import NotificationIcon from "@mui/icons-material/Notifications";
-import MessageIcon from "@mui/icons-material/Message";
-import BookmarkIcon from "@mui/icons-material/Bookmark";
+import NotificationIcon from "@mui/icons-material/NotificationsOutlined";
+import MessageIcon from "@mui/icons-material/MessageOutlined";
+import BookmarkIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import ListIcon from "@mui/icons-material/List";
-import ProfileIcon from "@mui/icons-material/Person2";
-import MoreIcon from "@mui/icons-material/More";
+import ProfileIcon from "@mui/icons-material/Person2Outlined";
+import MoreIcon from "@mui/icons-material/MoreOutlined";
 
 export default function Sidebar() {
   return (
