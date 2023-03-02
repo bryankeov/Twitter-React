@@ -1,13 +1,15 @@
-.sidebar {
+.sidebar-container {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid;
-  min-width: 200px;
-  padding: 15px;
+  text-align: start;
+  border-right: 1px solid lightgrey;
+  padding: 10px 25px 10px 25px;
 }
 
 .twitter-icon {
-  padding: 5px;
+  margin: 5px;
+  color: #1DA1F2;
+
 }
 
 .sidebarOptions {
@@ -17,6 +19,20 @@
   margin: 5px;
 }
 
+.sidebarOptions:hover {
+  color: #1DA1F2;
+  cursor: pointer;
+}
+
 svg {
   margin-right: 15px;
+}
+
+.tweet-btn {
+  background-color:#1DA1F2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  font-weight: 900;
 }

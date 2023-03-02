@@ -1,26 +1,25 @@
 import React, { useState } from "react";
-import P from 'prop-types';
+import P from "prop-types";
 import db from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
+import avatar from "../assets/Russell.webp";
 
 export default function NewTweet({ onNewTweet }) {
   const [message, setMessage] = useState("");
-  const [image, setImage] = useState("");
 
   const submitTweet = async (e) => {
     e.preventDefault();
 
-    const payload =   {
-      username: "bk",
+    const payload = {
+      avatar,
+      username: "BK",
       displayName: "Bryan",
       text: message,
-      image: image,
-    }
+    };
 
     const docRef = await addDoc(collection(db, "posts"), payload);
 
     setMessage("");
-    setImage("");
     onNewTweet({
       ...payload,
       id: docRef.id,
@@ -29,21 +28,17 @@ export default function NewTweet({ onNewTweet }) {
 
   return (
     <div className="tweet-container">
-      <form>
+      <h3 className="home-title">Home</h3>
+      <form onChange={submitTweet}>
+        <img src={avatar} alt="Avatar" className="avatar" />
         <input
           type="text"
+          className="newTweet-input"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="What's happening?"
         />
-        <input
-          type="text"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-          placeholder="Enter an image URL"
-          className="imageInput"
-        />
-        <button type="submit" onClick={submitTweet} className="submitButton">
+        <button type="submit" className="submitButton" onClick={submitTweet}>
           Tweet
         </button>
       </form>
@@ -53,4 +48,4 @@ export default function NewTweet({ onNewTweet }) {
 
 NewTweet.propTypes = {
   onNewTweet: P.func,
-}
+};

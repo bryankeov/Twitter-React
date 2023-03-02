@@ -13,7 +13,7 @@ import MoreIcon from "@mui/icons-material/More";
 
 export default function Sidebar() {
   return (
-    <div className="sidebar">
+    <div className="sidebar-container">
       <TwitterIcon className="twitter-icon" />
       <SidebarOptions icon={HomeIcon} text="Home" />
       <SidebarOptions icon={ExploreIcon} text="Explore" />
@@ -23,6 +23,9 @@ export default function Sidebar() {
       <SidebarOptions icon={ListIcon} text="Lists" />
       <SidebarOptions icon={ProfileIcon} text="Profile" />
       <SidebarOptions icon={MoreIcon} text="More" />
+      <button type="button" className="tweet-btn">
+        Tweet
+      </button>
     </div>
   );
 }

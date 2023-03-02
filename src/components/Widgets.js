@@ -5,11 +5,15 @@ import { TwitterTimelineEmbed, TwitterTweetEmbed } from "react-twitter-embed";
 export default function Widgets() {
   return (
     <div className="widgets-container">
-      <h3>What is Happening?</h3>
-      <TwitterTweetEmbed tweetId={"12351"} />
+      <h3>Trends</h3>
+      <TwitterTweetEmbed
+        tweetId={"1519480761749016577"}
+        className="twitter-embed"
+      />
       <TwitterTimelineEmbed
+        className="twitter-embed"
         sourceType="profile"
-        screenName="bk"
+        screenName="twitter"
         options={{ height: 400 }}
       />
     </div>

@@ -1,9 +1,65 @@
 .feed-container {
-  display: flex;
-  flex-direction: column;
+  flex: 2;
+  border-bottom: 1px solid lightgray;
 }
 
+.home-title {
+  border-bottom: 1px solid lightgray;
+  text-align: start;
+  padding: 10px;
+  margin: 0;
+}
 form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.newTweet-input {
+  height: 40px;
+  margin: 10px;
+  background-color: #c0deed;
+  border-radius: 25px;
+  border: none;
+}
+
+.submitButton {
+  border-radius: 25px;
+  background-color: #1DA1F2;
+  border: none;
+}
+
+.tweet-container {
+  border-bottom: 5px solid lightgray;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  min-height: 100px;
+  padding: 10px;
+}
+
+.post-header, .post-body {
+  padding: 10px;
+}
+
+.post-avatar {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.post-displayName {
+  font-size: 15;
+  font-weight: 700;
 }

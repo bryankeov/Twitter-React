@@ -15,28 +15,24 @@ export default function Feed() {
   const fetchPosts = () => {
     const fetchData = async () => {
       const q = query(collection(db, "posts"));
-      const snapshot =  await getDocs(q);
+      const snapshot = await getDocs(q);
       setPosts(snapshot.docs.map((doc) => doc.data()));
     };
 
     fetchData();
-  }
+  };
 
   const handleNewTweet = (newPost) => {
     // fetchPosts();
-    setPosts([
-      newPost,
-      ...posts,
-    ]);
-  }
-
-  console.log(posts);
+    setPosts([newPost, ...posts]);
+  };
   return (
     <div className="feed-container">
       <NewTweet onNewTweet={handleNewTweet} />
       {posts.map((post, index) => (
         <Posts
           key={index}
+          avatar={post.avatar}
           displayName={post.displayName}
           username={post.username}
           text={post.text}
