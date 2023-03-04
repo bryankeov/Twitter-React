@@ -34,21 +34,29 @@ export default function NewTweet({ onNewTweet }) {
       <h3 className="home-title">Home</h3>
       <form onSubmit={submitTweet}>
         <img src={avatar} alt="Avatar" className="avatar" />
-        <input
-          type="text"
-          className="newTweet-input"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="What's happening?"
-          maxLength="280"
-        />
-        <PhotoIcon className="newTweet-icons" />
-        <GifIcon className="newTweet-icons" />
-        <PollIcon className="newTweet-icons" />
-        <EmoteIcon className="newTweet-icons" />
-        <button type="submit" className="submitButton" onClick={submitTweet}>
-          Tweet
-        </button>
+        <div className="input-container">
+          <input
+            type="text"
+            className="newTweet-input"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="What's happening?"
+            maxLength="280"
+          />
+          <div className="btn-container">
+            <PhotoIcon className="newTweet-icons" />
+            <GifIcon className="newTweet-icons" />
+            <PollIcon className="newTweet-icons" />
+            <EmoteIcon className="newTweet-icons" />
+            <button
+              type="submit"
+              className="submitButton"
+              onClick={submitTweet}
+            >
+              Tweet
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );

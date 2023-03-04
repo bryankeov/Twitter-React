@@ -1,5 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import CommentIcon from "@mui/icons-material/ModeCommentOutlined";
+import RetweetIcon from "@mui/icons-material/LoopOutlined";
+import FavoriteIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import MoreIcon from "@mui/icons-material/MoreHorizOutlined";
 
 export default function Posts(props) {
   return (
@@ -12,6 +16,12 @@ export default function Posts(props) {
         </div>
         <div className="post-body">
           <div className="post-text">{props.text}</div>
+        </div>
+        <div className="post-footer">
+          <CommentIcon />
+          <RetweetIcon />
+          <FavoriteIcon />
+          <MoreIcon />
         </div>
       </div>
     </div>

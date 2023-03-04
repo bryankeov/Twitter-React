@@ -1,6 +1,9 @@
 .feed-container {
   flex: 2;
   height: 100%;
+  min-width: 450px;
+  border: 1px solid #E8F5FD;
+  overflow: auto;
 }
 
 .home-title {
@@ -9,19 +12,42 @@
   padding: 10px;
   margin: 0;
 }
+
 form {
   display: flex;
   flex-direction: row;
-  margin: 20px;
+  margin: 10px;
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1DA1F2;
+  width: 100%;
 }
 
 .newTweet-input {
   height: 40px;
   margin: 10px;
+  padding-left: 15px;
   background-color:  #E8F5FD;
   border-radius: 25px;
   border: none;
-  min-width: 400px;
+  font-weight: 500;
+  margin-right: 30px;
+}
+
+.newTweet-icons {
+  margin: 10px;
+  height: 40px;
 }
 
 .submitButton {
@@ -33,17 +59,21 @@ form {
   height: 40px;
   width: 100px;
   margin: 10px;
+  margin-left: auto;
+  margin-right: 30px;
 }
 
 .tweet-container {
   border-bottom: 5px solid #E8F5FD;
+  width: 100%;
+  padding: 10px;
 }
 
 .avatar {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  margin: 10px;
+  padding: 10px;
 }
 
 .post-container {
@@ -53,27 +83,40 @@ form {
   background-color: white;
   border-bottom: 1px solid #E8F5FD;
   padding: 10px;
+  width: 100%;
 }
 
 .post {
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 .post-header, .post-body {
   display: flex;
   gap: 10px;
-  padding: 10px;
+  padding: 5px;
+  width: 90%;
 }
 
+.post-footer {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  padding: 5px;
+}
 .post-avatar {
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  margin: 10px;
+  padding: 10px;
 }
 
 .post-displayName {
   font-size: 15;
   font-weight: 700;
+}
+
+.post-username {
+  color: gray;
 }
